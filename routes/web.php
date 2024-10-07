@@ -26,3 +26,10 @@ Route::get('/tombatadas', function () {
         'feladatok' => $tasks
     ]);
 });
+
+//3.2.3 (plusz) feladat - adat kinyerése url-ből
+Route::get('/urlparameter', function () {
+    return view('urlparameter', [
+        'title' => request('title'),
+    ]);
+});
