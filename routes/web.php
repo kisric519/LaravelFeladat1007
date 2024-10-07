@@ -14,3 +14,15 @@ Route::get('/egyvaltozo', function () {
         'name' => $username
     ]);
 });
+
+//3.2.2 feladat - Tömb adatok átküldése és kiíratása
+Route::get('/tombatadas', function () {
+    $tasks = [
+    'elem 1',
+    'elem 2',
+    'elem 3'
+    ];
+    return view('tomb', [
+        'feladatok' => $tasks
+    ]);
+});
